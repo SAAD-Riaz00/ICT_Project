@@ -1,83 +1,69 @@
 # ------------------------------------------------------------
-# PREMIUM MECHANICAL ENGINEERING THEME
+# PROFESSIONAL MECHANICAL ENGINEERING UI
 # ------------------------------------------------------------
 
 st.markdown("""
 <style>
 
-/* --------------------------------------------------------
-MAIN BACKGROUND
--------------------------------------------------------- */
+/* --------------------------------------------------
+MAIN APP BACKGROUND
+-------------------------------------------------- */
 
-[data-testid="stAppViewContainer"]{
+.stApp {
+
     background:
     linear-gradient(
-        rgba(8,12,18,0.93),
-        rgba(8,12,18,0.93)
+        rgba(10,15,20,0.96),
+        rgba(10,15,20,0.96)
     ),
-    url("https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1920");
+
+    url("https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1920");
 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 
-/* --------------------------------------------------------
-REMOVE DEFAULT STREAMLIT STYLING
--------------------------------------------------------- */
+/* --------------------------------------------------
+MAIN CONTENT AREA
+-------------------------------------------------- */
 
-header{
-    visibility:hidden;
-}
+.block-container {
 
-#MainMenu{
-    visibility:hidden;
-}
-
-footer{
-    visibility:hidden;
-}
-
-/* --------------------------------------------------------
-MAIN CONTAINER
--------------------------------------------------------- */
-
-.main .block-container{
     padding-top: 2rem;
     padding-bottom: 2rem;
-    max-width: 1300px;
+    max-width: 1350px;
 }
 
-/* --------------------------------------------------------
-TITLE SECTION
--------------------------------------------------------- */
+/* --------------------------------------------------
+HEADINGS
+-------------------------------------------------- */
 
-.main-title{
-    text-align:center;
-    font-size:48px;
-    font-weight:800;
-    color:#ffffff;
-    margin-bottom:10px;
-    letter-spacing:1px;
+.main-title {
+
+    text-align: center;
+    font-size: 52px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 10px;
 }
 
-.sub-title{
-    text-align:center;
-    font-size:18px;
-    color:#c7d5e0;
-    margin-bottom:30px;
-    line-height:1.7;
+.sub-title {
+
+    text-align: center;
+    color: #c8d2dc;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 35px;
 }
 
-/* --------------------------------------------------------
-SECTION CARDS
--------------------------------------------------------- */
+/* --------------------------------------------------
+CARDS
+-------------------------------------------------- */
 
-.section-card{
+.section-card {
 
-    background: rgba(255,255,255,0.05);
-
-    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.04);
 
     border: 1px solid rgba(255,255,255,0.08);
 
@@ -85,204 +71,184 @@ SECTION CARDS
 
     padding: 28px;
 
-    margin-top: 15px;
+    margin-top: 18px;
 
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 
-    box-shadow:
-    0 8px 32px rgba(0,0,0,0.35);
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.35);
 }
 
-/* --------------------------------------------------------
-METRIC BOXES
--------------------------------------------------------- */
+/* --------------------------------------------------
+METRIC BOX
+-------------------------------------------------- */
 
-.metric-box{
+.metric-box {
 
-    background: rgba(255,255,255,0.05);
+    background: rgba(255,255,255,0.04);
 
-    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 18px;
 
-    border-radius:18px;
+    padding: 18px;
 
-    padding:20px;
+    border: 1px solid rgba(255,255,255,0.08);
 
-    text-align:center;
-
-    margin-bottom:18px;
-
-    backdrop-filter: blur(10px);
-
-    transition:0.3s;
+    margin-bottom: 18px;
 }
 
-.metric-box:hover{
-
-    transform: translateY(-3px);
-
-    background: rgba(255,255,255,0.08);
-}
-
-/* --------------------------------------------------------
+/* --------------------------------------------------
 TEXT COLORS
--------------------------------------------------------- */
+-------------------------------------------------- */
 
-h1,h2,h3,h4,h5,h6,p,label,span{
-    color:white !important;
+h1, h2, h3, h4, h5, h6, p, label {
+
+    color: white !important;
 }
 
-/* --------------------------------------------------------
-INPUT BOXES
--------------------------------------------------------- */
+/* --------------------------------------------------
+INPUT FIELDS
+-------------------------------------------------- */
 
 .stTextInput input,
-.stNumberInput input{
+.stNumberInput input {
 
-    background-color: rgba(255,255,255,0.06) !important;
+    background-color: rgba(255,255,255,0.05) !important;
 
     color: white !important;
 
     border-radius: 12px !important;
 
     border: 1px solid rgba(255,255,255,0.08) !important;
-
-    padding: 10px !important;
 }
 
-/* --------------------------------------------------------
+/* --------------------------------------------------
 SELECT BOXES
--------------------------------------------------------- */
+-------------------------------------------------- */
 
-.stSelectbox div[data-baseweb="select"]{
+.stSelectbox div[data-baseweb="select"] {
 
-    background-color: rgba(255,255,255,0.06) !important;
+    background-color: rgba(255,255,255,0.05);
 
-    border-radius: 12px !important;
+    border-radius: 12px;
 
-    border: 1px solid rgba(255,255,255,0.08) !important;
+    border: 1px solid rgba(255,255,255,0.08);
 }
 
-/* --------------------------------------------------------
+/* --------------------------------------------------
 BUTTONS
--------------------------------------------------------- */
+-------------------------------------------------- */
 
-.stButton button{
+.stButton > button {
 
-    width:100%;
+    width: 100%;
+
+    border-radius: 14px;
+
+    height: 50px;
+
+    border: none;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: white;
 
     background: linear-gradient(
         135deg,
-        #2b5876,
-        #4e4376
+        #134e5e,
+        #71b280
     );
 
-    color:white;
-
-    border:none;
-
-    border-radius:14px;
-
-    padding:12px;
-
-    font-size:16px;
-
-    font-weight:600;
-
-    transition:0.3s;
+    transition: 0.3s;
 }
 
-.stButton button:hover{
+.stButton > button:hover {
 
     transform: scale(1.02);
 
     background: linear-gradient(
         135deg,
-        #355c7d,
-        #6c5b7b
+        #1d6578,
+        #85d69a
     );
 }
 
-/* --------------------------------------------------------
+/* --------------------------------------------------
 TABS
--------------------------------------------------------- */
+-------------------------------------------------- */
 
-.stTabs [data-baseweb="tab-list"]{
+.stTabs [role="tablist"] {
 
-    gap: 12px;
+    gap: 10px;
 }
 
-.stTabs [data-baseweb="tab"]{
+.stTabs [role="tab"] {
 
     background: rgba(255,255,255,0.05);
 
     border-radius: 12px;
 
-    padding: 12px 22px;
+    padding: 10px 20px;
 
     color: white;
 
     font-weight: 600;
-
-    border:1px solid rgba(255,255,255,0.05);
 }
 
-.stTabs [aria-selected="true"]{
+.stTabs [aria-selected="true"] {
 
     background: linear-gradient(
         135deg,
-        #243b55,
-        #141e30
+        #232526,
+        #414345
     ) !important;
-
-    border:1px solid rgba(255,255,255,0.1);
 }
 
-/* --------------------------------------------------------
+/* --------------------------------------------------
 DATAFRAME
--------------------------------------------------------- */
+-------------------------------------------------- */
 
-[data-testid="stDataFrame"]{
-
-    background: rgba(255,255,255,0.05);
+[data-testid="stDataFrame"] {
 
     border-radius: 18px;
 
-    padding:10px;
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,0.08);
 }
 
-/* --------------------------------------------------------
-PROGRESS BAR
--------------------------------------------------------- */
+/* --------------------------------------------------
+SIDEBAR
+-------------------------------------------------- */
 
-.stProgress > div > div > div > div{
+[data-testid="stSidebar"] {
+
+    background: rgba(20,25,30,0.95);
+}
+
+/* --------------------------------------------------
+SUCCESS / INFO BOXES
+-------------------------------------------------- */
+
+.stSuccess,
+.stInfo,
+.stWarning,
+.stError {
+
+    border-radius: 14px;
+}
+
+/* --------------------------------------------------
+PROGRESS BAR
+-------------------------------------------------- */
+
+.stProgress > div > div > div > div {
 
     background-image: linear-gradient(
         90deg,
-        #11998e,
-        #38ef7d
+        #00c6ff,
+        #0072ff
     );
-}
-
-/* --------------------------------------------------------
-SIDEBAR
--------------------------------------------------------- */
-
-[data-testid="stSidebar"]{
-
-    background: rgba(15,20,25,0.95);
-}
-
-/* --------------------------------------------------------
-SCROLLBAR
--------------------------------------------------------- */
-
-::-webkit-scrollbar{
-    width:10px;
-}
-
-::-webkit-scrollbar-thumb{
-    background:#4e4376;
-    border-radius:10px;
 }
 
 </style>
